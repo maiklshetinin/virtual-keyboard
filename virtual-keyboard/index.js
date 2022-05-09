@@ -69,8 +69,13 @@ class Elem {
             this.elem.innerHTML = this.elem.dataset.shift
             this.shift = true
         } else {
-            this.elem.innerHTML = this.elem.dataset.key
-            this.shift = false
+            if (this.elem.dataset.ru && lang === 'ru') {
+                this.elem.innerHTML = this.elem.dataset.ru
+                this.shift = false
+            } else {
+                this.elem.innerHTML = this.elem.dataset.key
+                this.shift = false
+            }
         }
         return this
     }
@@ -385,8 +390,6 @@ function onTab() {
 
 function onCapsLock() {  
   
-      
-
     console.log('onCapsLock')
     buttons.forEach((el) => {
        
