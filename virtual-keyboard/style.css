@@ -23,7 +23,10 @@ textarea {
     padding-left: 1px;
     width: 100%;
     margin-bottom: 20px; 
-    /* resize: none; */
+    resize: none;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 textarea:focus {
    outline-color: #bdae82;

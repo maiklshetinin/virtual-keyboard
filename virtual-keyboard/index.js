@@ -368,7 +368,8 @@ function onUp() {
 function onDown() {
     let cursor = textarea.selectionStart
     let value = textarea.value
-
+    console.log(textarea.clientWidth)
+    console.log(cursor)
     let rows = value.split('\n')
 
     let chekLastRow = value.length - rows[rows.length - 1].length
