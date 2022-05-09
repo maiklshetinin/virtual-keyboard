@@ -19,9 +19,10 @@ body {
 }
 
 textarea {
+    padding-left: 1px;
     width: 100%;
     margin-bottom: 20px; 
-    resize: none;
+    /* resize: none; */
 }
 textarea:focus {
    outline-color: #bdae82;
