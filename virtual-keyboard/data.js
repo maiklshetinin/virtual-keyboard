@@ -14,17 +14,20 @@ const data = [
     {
         "key": "2",
         "code": "Digit2",
-        "shift":"@"
+        "shift":"@",
+        "shiftru":'"'
     },
     {
         "key": "3",
         "code": "Digit3",
-        "shift":"#"
+        "shift":"#",
+        "shiftru":'№'
     },
     {
         "key": "4",
         "code": "Digit4",
-        "shift":"$"
+        "shift":"$",
+        "shiftru":';'
     },
     {
         "key": "5",
@@ -34,12 +37,14 @@ const data = [
     {
         "key": "6",
         "code": "Digit6",
-        "shift":"^"
+        "shift":"^",
+        "shiftru":':'
     },
     {
         "key": "7",
         "code": "Digit7",
-        "shift":"&"
+        "shift":"&",
+        "shiftru":'?'
     },
     {
         "key": "8",
@@ -140,7 +145,8 @@ const data = [
     {
         "key": "\\",
         "code": "Backslash",
-        "shift":"|"
+        "shift":"|",
+        "shiftru":'//'
     },
     {
         "key": "del",
@@ -261,12 +267,14 @@ const data = [
         "ru":"ю",
         "code": "Period",
         "shift":">"
+        
     },
     {
         "key": "/",
         "ru":".",
         "code": "Slash",
-        "shift":"?"
+        "shift":"?",
+        "shiftru":','
     },
     {
         "key": "▲",

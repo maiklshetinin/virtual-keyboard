@@ -66,9 +66,19 @@ class Elem {
     }
     onShift() {
         if (!this.shift) {
-            this.elem.innerHTML = this.elem.dataset.shift
-            this.shift = true
-        } else {
+            if (lang === 'en') {
+                this.elem.innerHTML = this.elem.dataset.shift
+                this.shift = true
+            } else if (lang === 'ru') {
+                if (this.elem.dataset.shiftru) {
+                    this.elem.innerHTML = this.elem.dataset.shiftru
+                    this.shift = true
+                } else if (this.elem.dataset.shift && !this.elem.dataset.ru) {
+                    this.elem.innerHTML = this.elem.dataset.shift
+                    this.shift = true
+                }
+            }       
+            } else {
             if (this.elem.dataset.ru && lang === 'ru') {
                 this.elem.innerHTML = this.elem.dataset.ru
                 this.shift = false
@@ -483,6 +493,10 @@ function addButtons() {
 
         if (el.shift){
             btn.elem.setAttribute('data-shift', el.shift)
+        }
+      
+        if (el.shiftru){
+            btn.elem.setAttribute('data-shiftru', el.shiftru)
         }
 
         if (el.ru) {
