@@ -63,7 +63,7 @@ const data = [
     },
     {
         "key": "-",
-        "code": "NumpadSubtract",
+        "code": "Minus",
         "shift":"_"
     },
     {
