@@ -9,6 +9,6 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }

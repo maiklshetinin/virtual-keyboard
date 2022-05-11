@@ -511,8 +511,25 @@ function onBackSpace() {
 
 function onUp() {
   const cursor = textarea.selectionStart - 1;
-  const { value } = textarea;
-  const beforeCursor = value.slice(0, textarea.selectionStart).split('\n');
+
+  let check = '';
+  let res = '';
+  for (let i = 0; i < textarea.value.length; i++) {
+    const letter = textarea.value[i];
+
+    if (check.length < 109) {
+      check += letter;
+    } else if (check.length === 109) {
+      res += check;
+      check = '';
+      res += '\n';
+    }
+  }
+  res += check;
+
+  const val = res;
+
+  const beforeCursor = val.slice(0, textarea.selectionStart).split('\n');
 
   if (beforeCursor[0].length === cursor + 1) return;
 
@@ -534,14 +551,30 @@ function onUp() {
 
 function onDown() {
   const cursor = textarea.selectionStart;
-  const { value } = textarea;
 
-  const rows = value.split('\n');
+  let check = '';
+  let res = '';
+  for (let i = 0; i < textarea.value.length; i++) {
+    const letter = textarea.value[i];
 
-  const chekLastRow = value.length - rows[rows.length - 1].length;
+    if (check.length < 109) {
+      check += letter;
+    } else if (check.length === 109) {
+      res += check;
+      check = '';
+      res += '\n';
+    }
+  }
+  res += check;
 
-  const beforeCursor = value.slice(textarea.value[0], textarea.selectionStart).split('\n');
-  const afterCursor = value.slice(textarea.selectionStart, value.length).split('\n');
+  const val = res;
+
+  const rows = val.split('\n');
+
+  const chekLastRow = val.length - rows[rows.length - 1].length;
+
+  const beforeCursor = val.slice(textarea.value[0], textarea.selectionStart).split('\n');
+  const afterCursor = val.slice(textarea.selectionStart, val.length).split('\n');
 
   if (rows.length === 1) return;
   if (cursor >= chekLastRow) return;
