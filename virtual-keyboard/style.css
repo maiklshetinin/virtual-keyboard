@@ -24,9 +24,9 @@ textarea {
     width: 100%;
     margin-bottom: 20px; 
     resize: none;
-    white-space: pre;
+    /* white-space: pre;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 textarea:focus {
    outline-color: #bdae82;
