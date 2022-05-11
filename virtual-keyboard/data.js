@@ -259,7 +259,7 @@ const data = [
     {
         "key": ",",
         "ru":"б",
-        "code": "NumpadDecimal",
+        "code": "Comma",
         "shift":"<"
     },
     {
